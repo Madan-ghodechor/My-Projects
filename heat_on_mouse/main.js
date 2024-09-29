@@ -18,8 +18,10 @@ bodyEl.addEventListener("mousemove", (evt) => {
 })
 
 bodyEl.addEventListener("touchmove", (evt) => {
-    const xPos = evt.offsetX;
-    const yPos = evt.offsetY;
+    const touch = evt.touches[0];
+
+    const xPos = touch.clientX;
+    const yPos = touch.clientY;
 
     const spanEL = document.createElement("span");
     spanEL.style.left = xPos + "px";
